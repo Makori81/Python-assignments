@@ -1,6 +1,5 @@
 class Inventory:
     def __init__(self):
-        # Initialize an empty dictionary to store items and their quantities
         self.items = {}
 
     def add_item(self, item_name, quantity):
@@ -24,17 +23,14 @@ class Inventory:
         return f"Total quantity of all items: {total} units"
 
 def main():
-    # Create an instance of the Inventory class
     inventory = Inventory()
 
     while True:
-        # Display menu options to the user
         print("\n1. Add item")
         print("2. Get item info")
         print("3. Get total quantity")
         print("4. Exit")
 
-        # Prompt the user to choose an option
         choice = input("Choose an option: ")
 
         if choice == "1":
@@ -45,7 +41,6 @@ def main():
             print(f"{quantity} units of {item_name} have been added to the inventory.")
 
         elif choice == "2":
-            # Retrieve information about a specific item
             item_name = input("Enter the item name: ")
             print(inventory.get_item_info(item_name))
 
@@ -55,7 +50,7 @@ def main():
 
         elif choice == "4":
             # Exit the program
-            print("Exiting the program. Goodbye!")
+            print("Exiting the program.")
             break
 
         else:
